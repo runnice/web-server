@@ -10,7 +10,7 @@ import (
 
 func helloHandler(c *gin.Context) {
 	c.JSON(200, gin.H{
-		"message": "Hello World!",
+		"message": "Hello Vinicius!",
 	})
 }
 
@@ -28,7 +28,7 @@ func main() {
 
 	gin.DefaultWriter = io.MultiWriter(f)
 	// Capturar o request GET "/hello-world"
-	router.GET("/hello-world", helloHandler)
+	router.GET("/hello", helloHandler)
 	router.Run()
 
 }
